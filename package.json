@@ -1,0 +1,25 @@
+{
+  "name": "test-static-app-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kai-you2/test-static-app-deploy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kai-you2/test-static-app-deploy/issues"
+  },
+  "homepage": "https://github.com/kai-you2/test-static-app-deploy#readme",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.65"
+  }
+}

@@ -1,0 +1,24 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)\
+
+trigger:
+  - master
+
+pr: none
+
+steps:
+  - task: NodeTool@0
+    displayName: 'Install Node.js'
+    inputs:
+      versionSpec: '16.x'
+
+  - task: CmdLine@2
+    inputs:
+      script: |
+        npm install -g pnpm@7.x
+    displayName: 'install pnpm 7.x'
+
+  - script: |
+      npm run build
+      echo '##vso[task.setvariable variable=BuildOutputDir]$(System.DefaultWorkingDirectory)/docs/.vitepress/dist'
+    displayName: 'Build the static site'
+    
